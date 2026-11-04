@@ -8,9 +8,6 @@
 |---|---|
 | Jesus Eduardo Moreno Osoria | 2136063 |
 | Osvaldo Salvador Cárdenas Mejorado | 2141553 |
-| Abraham Sandoval De León | 2136604 |
-
-**Repositorio:** _(agregar enlace)_
 
 Este repositorio tiene dos partes:
 
