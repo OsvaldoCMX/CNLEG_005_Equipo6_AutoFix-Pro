@@ -1,0 +1,20 @@
+﻿id,regla,criterio,tipo,escenario,parametros,entrada,resultado_esperado
+PIA-01,R1 Aprobación gerencial por monto,CA-007,Éxito,cotizar_inicial,monto=6300.00,"Cotización inicial de $6,300.00",Pendiente de Autorización del Cliente; sin alerta al Gerente
+PIA-02,R1 Aprobación gerencial por monto,CA-007,Éxito,cotizar_inicial,monto=18500.00,"Cotización inicial de $18,500.00",Pendiente de Aprobación Gerencial; alerta a Gerente de Taller
+PIA-03,R1 Aprobación gerencial por monto,CA-007,Límite,cotizar_inicial,monto=15000.00,"Cotización inicial de exactamente $15,000.00",Pendiente de Autorización del Cliente; sin alerta al Gerente
+PIA-04,R1 Aprobación gerencial por monto,CA-007,Límite,cotizar_inicial,monto=15000.01,"Cotización inicial de $15,000.01 (un centavo arriba)",Pendiente de Aprobación Gerencial; alerta a Gerente de Taller
+PIA-05,R1 Aprobación gerencial por monto,CA-007,Error,presentar_sin_aprobacion,monto=18500.00,"Presentar al cliente una cotización de $18,500.00 sin aprobación del Gerente",OperacionDeCotizacionNoPermitida; cotización Pendiente de Aprobación Gerencial
+PIA-06,R1 Aprobación gerencial por monto,CA-016,Límite,cotizar_adicional,monto=20000.00,"Cotización adicional (v.2) de $20,000.00",Pendiente de Autorización del Cliente; sin alerta al Gerente
+PIA-07,R2 Sin diagnóstico no se cotiza,CA-005,Éxito,cotizar_con_diagnostico,,Orden con diagnóstico registrado por el técnico,v.1; orden Cotizada
+PIA-08,R2 Sin diagnóstico no se cotiza,CA-005,Error,cotizar_sin_diagnostico,,Orden En Diagnóstico sin diagnóstico registrado,DiagnosticoRequerido; cotizaciones guardadas: 0; orden En Diagnóstico
+PIA-09,R2 Sin diagnóstico no se cotiza,CA-005,Límite,diagnostico_vacio,texto=   ,Diagnóstico capturado solo con espacios,ValorInvalido; al cotizar: DiagnosticoRequerido
+PIA-10,R2 Sin diagnóstico no se cotiza,CA-033,Error,modificar_diagnostico_cotizado,,Cambiar el diagnóstico de una orden ya cotizada,DiagnosticoNoModificable; diagnóstico original conservado
+PIA-11,R3 Autorizante de flotilla,CA-029,Éxito,registrar_decision,cliente=flotilla|autorizante=Carlos Ruiz|responsable=si,El Responsable de Flotilla autoriza los 2 trabajos,cotización Autorizada; orden Autorizada
+PIA-12,R3 Autorizante de flotilla,CA-029,Error,registrar_decision,cliente=flotilla|autorizante=Pedro Gómez|responsable=no,El conductor intenta autorizar,AutorizanteNoValido; cotización Pendiente de Autorización del Cliente; orden Cotizada
+PIA-13,R3 Autorizante de flotilla,CA-029,Límite,registrar_decision,cliente=flotilla|autorizante=  carlos RUIZ |responsable=si,Nombre del Responsable con otras mayúsculas y espacios,cotización Autorizada; orden Autorizada
+PIA-14,R3 Autorizante de flotilla,CA-029,Error,registrar_decision,cliente=particular|autorizante=María López|responsable=si,Cliente particular registrado como si fuera flotilla,AutorizanteNoValido; cotización Pendiente de Autorización del Cliente; orden Cotizada
+PIA-15,R4 Entrega solo con pago o crédito,CA-041,Éxito,entregar,cliente=particular|pago=total,Particular pagó el total de $6300.00,orden Cerrada
+PIA-16,R4 Entrega solo con pago o crédito,CA-039 / CA-041,Éxito,entregar,cliente=flotilla|pago=credito,Flotilla con cargo a crédito,orden Cerrada; crédito vence 2026-10-27
+PIA-17,R4 Entrega solo con pago o crédito,CA-042,Error,entregar,cliente=particular|pago=ninguno,Trabajos terminados pero sin pago,EntregaNoPermitida; orden Lista para Entrega
+PIA-18,R4 Entrega solo con pago o crédito,CA-043,Límite,entregar,cliente=particular|decision=rechazo_total,El cliente rechazó toda la cotización,orden Cerrada sin Reparación; sin cobro
+PIA-19,R4 Entrega solo con pago o crédito,CA-026 / CA-042,Límite,entregar,cliente=particular|pago=6299.99,Pago de $6299.99 (un centavo menos del total),PagoNoPermitido; EntregaNoPermitida; orden Lista para Entrega

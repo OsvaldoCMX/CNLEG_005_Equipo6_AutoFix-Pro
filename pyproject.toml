@@ -1,0 +1,30 @@
+[project]
+name = "autofix-pro-u5"
+version = "0.5.0"
+description = "CLN Unidad 5 - Pruebas, integracion y calidad (laboratorio + AutoFix Pro, Equipo 6)"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# "." permite importar el laboratorio como src.domain; "src" permite importar autofix.
+pythonpath = [".", "src"]
+addopts = "-p no:cacheprovider"
+
+[tool.coverage.run]
+source = ["src"]
+
+[tool.coverage.report]
+show_missing = true
+skip_empty = true
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+# Reglas fijadas a proposito: desde Ruff 0.16 el conjunto por defecto es mucho mas grande,
+# asi que sin esta lista el resultado cambia segun la version que instale cada integrante.
+select = ["E4", "E7", "E9", "F", "W", "I", "B", "UP"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["src", "autofix"]

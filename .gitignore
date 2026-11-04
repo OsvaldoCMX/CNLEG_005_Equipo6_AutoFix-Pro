@@ -1,0 +1,18 @@
+# Entorno virtual y caches (no se suben al repositorio)
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+
+# Reportes de cobertura (se generan al correr pytest --cov)
+htmlcov/
+.coverage
+.coverage.*
+
+# Editores y sistema
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
