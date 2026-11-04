@@ -7,7 +7,6 @@ __pycache__/
 .ruff_cache/
 
 # Reportes de cobertura (se generan al correr pytest --cov)
-htmlcov/
 .coverage
 .coverage.*
 
