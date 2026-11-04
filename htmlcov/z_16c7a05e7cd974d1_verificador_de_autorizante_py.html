@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Coverage for src\autofix\dominio\servicios\verificador_de_autorizante.py: 100%</title>
+    <link rel="icon" sizes="32x32" href="favicon_32_cb_c827f16f.png">
+    <link rel="stylesheet" href="style_cb_0853b3de.css" type="text/css">
+    <script src="coverage_html_cb_c74880ea.js" defer></script>
+</head>
+<body class="pyfile">
+<header>
+    <div class="content">
+        <h1>
+            <span class="text">Coverage for </span><b>src<span class="sep">\</span>autofix<span class="sep">\</span>dominio<span class="sep">\</span>servicios<span class="sep">\</span>verificador_de_autorizante.py</b>:
+            <span class="pc_cov">100%</span>
+        </h1>
+        <aside id="help_panel_wrapper">
+            <input id="help_panel_state" type="checkbox">
+            <label for="help_panel_state">
+                <img id="keyboard_icon" src="keybd_closed_cb_900cfef5.png" alt="Show/hide keyboard shortcuts">
+            </label>
+            <div id="help_panel">
+                <p class="legend">Shortcuts on this page</p>
+                <div class="keyhelp">
+                    <p>
+                        <kbd>r</kbd>
+                        <kbd>m</kbd>
+                        <kbd>x</kbd>
+                        <kbd>p</kbd>
+                        &nbsp; toggle line displays
+                    </p>
+                    <p>
+                        <kbd>j</kbd>
+                        <kbd>k</kbd>
+                        &nbsp; next/prev highlighted chunk
+                    </p>
+                    <p>
+                        <kbd>0</kbd> &nbsp; (zero) top of page
+                    </p>
+                    <p>
+                        <kbd>1</kbd> &nbsp; (one) first highlighted chunk
+                    </p>
+                    <p>
+                        <kbd>[</kbd>
+                        <kbd>]</kbd>
+                        &nbsp; prev/next file
+                    </p>
+                    <p>
+                        <kbd>u</kbd> &nbsp; up to the index
+                    </p>
+                    <p>
+                        <kbd>?</kbd> &nbsp; show/hide this help
+                    </p>
+                </div>
+            </div>
+        </aside>
+        <h2>
+            <span class="text">12 statements &nbsp;</span>
+            <button type="button" class="run button_toggle_run" value="run" data-shortcut="r" title="Toggle lines run">12<span class="text"> run</span></button>
+            <button type="button" class="mis show_mis button_toggle_mis" value="mis" data-shortcut="m" title="Toggle lines missing">0<span class="text"> missing</span></button>
+            <button type="button" class="exc show_exc button_toggle_exc" value="exc" data-shortcut="x" title="Toggle lines excluded">0<span class="text"> excluded</span></button>
+            <button type="button" class="par run show_par button_toggle_par" value="par" data-shortcut="p" title="Toggle lines partially run">0<span class="text"> partial</span></button>
+        </h2>
+        <p class="text">
+            <a id="prevFileLink" class="nav" href="z_a2df833d76bd9e37_valores_py.html">&#xab; prev</a> &nbsp; &nbsp;
+            <a id="indexLink" class="nav" href="index.html">&Hat; index</a> &nbsp; &nbsp;
+            <a id="nextFileLink" class="nav" href="z_096a6644eb993d43_adaptadores_py.html">&#xbb; next</a>
+            &nbsp; &nbsp; &nbsp;
+            <a class="nav" href="https://coverage.readthedocs.io/en/7.17.1">coverage.py v7.17.1</a>,
+            created at 2026-11-03 18:47 -0600
+        </p>
+        <aside class="hidden">
+            <button type="button" class="button_next_chunk" data-shortcut="j"></button>
+            <button type="button" class="button_prev_chunk" data-shortcut="k"></button>
+            <button type="button" class="button_top_of_page" data-shortcut="0"></button>
+            <button type="button" class="button_first_chunk" data-shortcut="1"></button>
+            <button type="button" class="button_prev_file" data-shortcut="["></button>
+            <button type="button" class="button_next_file" data-shortcut="]"></button>
+            <button type="button" class="button_to_index" data-shortcut="u"></button>
+            <button type="button" class="button_show_hide_help" data-shortcut="?"></button>
+        </aside>
+    </div>
+</header>
+<main id="source">
+    <p class="pln"><span class="n"><a id="t1" href="#t1">1</a></span><span class="t"><span class="str">&quot;&quot;&quot;Domain Service: &#191;qui&#233;n puede autorizar una cotizaci&#243;n? (US-006, US-016, CA-029).</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t2" href="#t2">2</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t3" href="#t3">3</a></span><span class="t"><span class="str">La regla necesita datos de dos Aggregates (el Cliente y la decisi&#243;n sobre la</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t4" href="#t4">4</a></span><span class="t"><span class="str">Cotizaci&#243;n), por eso no pertenece naturalmente a ninguno de los dos.</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t5" href="#t5">5</a></span><span class="t"><span class="str">&quot;&quot;&quot;</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t6" href="#t6">6</a></span><span class="t"><span class="key">from</span> <span class="nam">__future__</span> <span class="key">import</span> <span class="nam">annotations</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t7" href="#t7">7</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t8" href="#t8">8</a></span><span class="t"><span class="key">from</span> <span class="nam">autofix</span><span class="op">.</span><span class="nam">dominio</span><span class="op">.</span><span class="nam">clientes</span><span class="op">.</span><span class="nam">cliente</span> <span class="key">import</span> <span class="nam">Cliente</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t9" href="#t9">9</a></span><span class="t"><span class="key">from</span> <span class="nam">autofix</span><span class="op">.</span><span class="nam">dominio</span><span class="op">.</span><span class="nam">compartido</span><span class="op">.</span><span class="nam">errores</span> <span class="key">import</span> <span class="nam">AutorizanteNoValido</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t10" href="#t10">10</a></span><span class="t"><span class="key">from</span> <span class="nam">autofix</span><span class="op">.</span><span class="nam">dominio</span><span class="op">.</span><span class="nam">cotizaciones</span><span class="op">.</span><span class="nam">valores</span> <span class="key">import</span> <span class="nam">Autorizante</span><span class="op">,</span> <span class="nam">RolDeAutorizante</span>&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t11" href="#t11">11</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="pln"><span class="n"><a id="t12" href="#t12">12</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t13" href="#t13">13</a></span><span class="t"><span class="key">class</span> <span class="nam">VerificadorDeAutorizante</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t14" href="#t14">14</a></span><span class="t">    <span class="key">def</span> <span class="nam">verificar</span><span class="op">(</span><span class="nam">self</span><span class="op">,</span> <span class="nam">cliente</span><span class="op">:</span> <span class="nam">Cliente</span><span class="op">,</span> <span class="nam">autorizante</span><span class="op">:</span> <span class="nam">Autorizante</span><span class="op">)</span> <span class="op">-&gt;</span> <span class="key">None</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t15" href="#t15">15</a></span><span class="t">        <span class="key">if</span> <span class="nam">cliente</span><span class="op">.</span><span class="nam">es_de_flotilla</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t16" href="#t16">16</a></span><span class="t">            <span class="nam">responsable</span> <span class="op">=</span> <span class="nam">cliente</span><span class="op">.</span><span class="nam">responsable</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t17" href="#t17">17</a></span><span class="t">            <span class="key">if</span> <span class="op">(</span><span class="nam">autorizante</span><span class="op">.</span><span class="nam">rol</span> <span class="key">is</span> <span class="key">not</span> <span class="nam">RolDeAutorizante</span><span class="op">.</span><span class="nam">RESPONSABLE_DE_FLOTILLA</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t18" href="#t18">18</a></span><span class="t">                    <span class="key">or</span> <span class="nam">autorizante</span><span class="op">.</span><span class="nam">nombre</span><span class="op">.</span><span class="nam">casefold</span><span class="op">(</span><span class="op">)</span> <span class="op">!=</span> <span class="nam">responsable</span><span class="op">.</span><span class="nam">nombre</span><span class="op">.</span><span class="nam">casefold</span><span class="op">(</span><span class="op">)</span><span class="op">)</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t19" href="#t19">19</a></span><span class="t">                <span class="key">raise</span> <span class="nam">AutorizanteNoValido</span><span class="op">(</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t20" href="#t20">20</a></span><span class="t">                    <span class="fst">f&quot;</span><span class="fst">Para la flotilla de </span><span class="op">{</span><span class="nam">cliente</span><span class="op">.</span><span class="nam">empresa</span><span class="op">}</span><span class="fst"> solo puede autorizar el Responsable de Flotilla </span><span class="fst">&quot;</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run run2"><span class="n"><a id="t21" href="#t21">21</a></span><span class="t">                    <span class="fst">f&quot;</span><span class="fst">(</span><span class="op">{</span><span class="nam">responsable</span><span class="op">.</span><span class="nam">nombre</span><span class="op">}</span><span class="fst">); el conductor no puede autorizar.</span><span class="fst">&quot;</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t22" href="#t22">22</a></span><span class="t">        <span class="key">elif</span> <span class="nam">autorizante</span><span class="op">.</span><span class="nam">rol</span> <span class="key">is</span> <span class="key">not</span> <span class="nam">RolDeAutorizante</span><span class="op">.</span><span class="nam">CLIENTE</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t23" href="#t23">23</a></span><span class="t">            <span class="key">raise</span> <span class="nam">AutorizanteNoValido</span><span class="op">(</span><span class="str">&quot;En un cliente particular, la decisi&#243;n la registra el propio cliente.&quot;</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+</main>
+<footer>
+    <div class="content">
+        <p>
+            <a class="nav" href="z_a2df833d76bd9e37_valores_py.html">&#xab; prev</a> &nbsp; &nbsp;
+            <a class="nav" href="index.html">&Hat; index</a> &nbsp; &nbsp;
+            <a class="nav" href="z_096a6644eb993d43_adaptadores_py.html">&#xbb; next</a>
+            &nbsp; &nbsp; &nbsp;
+            <a class="nav" href="https://coverage.readthedocs.io/en/7.17.1">coverage.py v7.17.1</a>,
+            created at 2026-11-03 18:47 -0600
+        </p>
+    </div>
+</footer>
+</body>
+</html>
