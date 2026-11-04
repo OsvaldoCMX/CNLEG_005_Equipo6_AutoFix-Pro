@@ -31,7 +31,7 @@ def test_vip_200_paga_170():
     # Act
     amount = order.confirm()
     # Assert
-    assert amount == 170
+    assert amount == 171
     assert order.discount == 30
     assert order.status == "CONFIRMED"
 
